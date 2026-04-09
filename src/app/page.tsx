@@ -4,6 +4,7 @@ import { FocusSection } from "@/components/sections/FocusSection";
 import { GallerySection } from "@/components/sections/GallerySection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ImpactSection } from "@/components/sections/ImpactSection";
+import { LocationSection } from "@/components/sections/LocationSection";
 import { SiteFooter } from "@/components/sections/SiteFooter";
 import { SiteHeader } from "@/components/sections/SiteHeader";
 
@@ -16,6 +17,7 @@ export default function Home() {
           { href: "#focus", label: "Focus areas" },
           { href: "#impact", label: "Impact" },
           { href: "#gallery", label: "Gallery" },
+          { href: "#location", label: "Location" },
           { href: "#contact", label: "Get in touch" },
         ]}
       />
@@ -28,6 +30,7 @@ export default function Home() {
         <ImpactSection />
         <DonateSection />
         <GallerySection />
+        <LocationSection />
         <ContactSection />
         <SiteFooter />
       </main>

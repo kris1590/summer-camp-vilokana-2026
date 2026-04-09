@@ -62,6 +62,13 @@ export function SiteHeader({ links }: { links: NavLink[] }) {
             Gallery
           </a>
           <a
+            href="#location"
+            onClick={onAnchorClick}
+            className="hidden rounded-full px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-900/5 sm:inline-flex"
+          >
+            Location
+          </a>
+          <a
             href="#donate"
             onClick={onAnchorClick}
             className="inline-flex items-center justify-center rounded-full bg-[#2F5D46] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#284D3B] focus:outline-none focus:ring-2 focus:ring-[#2F5D46]/25"
