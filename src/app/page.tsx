@@ -1,4 +1,5 @@
 import { GalleryCarousel } from "@/components/GalleryCarousel";
+import { MobileNav } from "@/components/MobileNav";
 
 export default function Home() {
   return (
@@ -12,6 +13,16 @@ export default function Home() {
           </a>
 
           <nav className="flex shrink-0 items-center gap-2">
+            <MobileNav
+              links={[
+                { href: "#hero", label: "Home" },
+                { href: "#focus", label: "Focus areas" },
+                { href: "#impact", label: "Impact" },
+                { href: "#donate", label: "Donate" },
+                { href: "#gallery", label: "Gallery" },
+                { href: "#contact", label: "Get in touch" },
+              ]}
+            />
             <a
               href="#donate"
               className="hidden rounded-full px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-900/5 sm:inline-flex"
@@ -372,7 +383,7 @@ export default function Home() {
           />
         </section>
 
-        <footer id="contact" className="mt-14 border-t border-zinc-900/10 pt-10 text-sm text-zinc-700">
+        <section id="contact" className="mt-14">
           <h2 className="font-(--font-serif) text-2xl tracking-tight text-zinc-900">
             Get in Touch
           </h2>
@@ -398,7 +409,9 @@ export default function Home() {
               <p className="mt-1 text-sm text-zinc-700">+91 94498 74821</p>
             </a>
           </div>
+        </section>
 
+        <footer className="mt-10 rounded-3xl bg-white/55 p-6 text-sm text-zinc-700 ring-1 ring-zinc-900/10">
           <p className="max-w-3xl">
             Your support can make a lasting difference in a child’s learning
             journey.
