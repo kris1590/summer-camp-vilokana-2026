@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type LinkItem = { href: string; label: string };
 
 export function MobileNav({ links }: { links: LinkItem[] }) {
   const [open, setOpen] = useState(false);
+  const panelRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
@@ -15,50 +16,51 @@ export function MobileNav({ links }: { links: LinkItem[] }) {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  useEffect(() => {
-    if (!open) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = prev;
-    };
-  }, [open]);
+  function navigateToHash(href: string) {
+    const targetId = href.startsWith("#") ? href : "";
+    setOpen(false);
+    window.setTimeout(() => {
+      if (!targetId) return;
+      const el = document.querySelector(targetId);
+      if (el instanceof HTMLElement) el.scrollIntoView({ behavior: "smooth" });
+      else window.location.hash = targetId;
+    }, 0);
+  }
 
   return (
-    <div className="sm:hidden">
+    <div className="sm:hidden relative">
       <button
         type="button"
-        onClick={() => setOpen(true)}
-        className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/70 text-zinc-900 ring-1 ring-zinc-900/10 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-zinc-900/10"
+        onClick={() => {
+          setOpen((v) => !v);
+        }}
+        className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-white/70 px-4 text-sm font-semibold text-zinc-900 ring-1 ring-zinc-900/10 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-zinc-900/10"
         aria-label="Open menu"
+        aria-expanded={open}
       >
-        <span aria-hidden className="text-lg leading-none">
+        <span aria-hidden className="text-base leading-none">
           ☰
         </span>
+        <span className="leading-none">Menu</span>
       </button>
 
       {open ? (
         <div className="fixed inset-0 z-50">
           <button
             type="button"
-            className="absolute inset-0 bg-black/30"
+            className="absolute inset-0 bg-transparent"
             aria-label="Close menu"
             onClick={() => setOpen(false)}
           />
 
-          <div className="absolute left-3 right-3 top-3 overflow-hidden rounded-3xl bg-[#F7F2D6] shadow-xl ring-1 ring-zinc-900/10">
-            <div className="flex items-center justify-end px-5 py-4">
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/70 text-zinc-900 ring-1 ring-zinc-900/10"
-                aria-label="Close menu"
-              >
-                <span aria-hidden className="text-lg leading-none">
-                  ×
-                </span>
-              </button>
-            </div>
+          <div
+            ref={panelRef}
+            className="absolute right-3 top-16 w-[calc(100vw-24px)] max-w-sm overflow-hidden rounded-3xl bg-[#F7F2D6] shadow-2xl ring-1 ring-zinc-900/10"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site navigation"
+          >
+
 
             <div className="h-px bg-zinc-900/10" />
 
@@ -67,8 +69,16 @@ export function MobileNav({ links }: { links: LinkItem[] }) {
                 <a
                   key={l.href}
                   href={l.href}
-                  onClick={() => setOpen(false)}
-                  className="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-zinc-900 transition hover:bg-white/70"
+                  onClick={(e) => {
+                    // Handle anchors ourselves so scroll happens after close
+                    if (l.href.startsWith("#")) {
+                      e.preventDefault();
+                      navigateToHash(l.href);
+                      return;
+                    }
+                    setOpen(false);
+                  }}
+                  className="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-zinc-900 transition hover:bg-white/70 active:bg-white"
                 >
                   {l.label}
                   <span aria-hidden className="text-zinc-600">

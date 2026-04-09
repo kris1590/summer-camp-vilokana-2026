@@ -1,5 +1,6 @@
 import { GalleryCarousel } from "@/components/GalleryCarousel";
 import { MobileNav } from "@/components/MobileNav";
+import { Reveal } from "@/components/Reveal";
 
 export default function Home() {
   return (
@@ -59,19 +60,18 @@ export default function Home() {
 
       <main className="mx-auto w-full max-w-6xl px-4 pb-16 pt-10 sm:px-6 sm:pt-14">
         <section id="hero" className="grid gap-10 lg:grid-cols-12 lg:items-center">
-          <div className="lg:col-span-6">
+          <Reveal className="lg:col-span-6">
             <p className="inline-flex items-center rounded-full bg-white/60 px-3 py-1 text-xs font-semibold tracking-wide text-zinc-700 ring-1 ring-zinc-900/10">
               Support Swaroopa Summer Camp (2026)
             </p>
 
-            <h1 className="mt-5 font-(--font-serif) text-5xl leading-[0.95] tracking-tight text-zinc-900 sm:text-6xl">
+            <h1 className="mt-5 font-(--font-serif) text-5xl leading-[0.92] tracking-[-0.02em] text-zinc-950 text-center sm:text-left   sm:text-7xl">
               Empower a{" "}
-              <span className="italic text-[#2F5D46]">Rural</span>
-              <br />
-              Child
+              <span className="italic text-[#2F5D46]">Rural</span> Child
+
             </h1>
 
-            <p className="mt-4 max-w-xl text-sm leading-7 text-zinc-700">
+            <p className="mt-5 max-w-xl text-base leading-7 text-zinc-800/90 sm:text-[17px]">
               A 10-day residential camp for rural children from HD Kote taluk,
               Mysore district (20th April to 30th April 2026). Designed to
               provide meaningful learning experiences for 50 children from
@@ -93,9 +93,9 @@ export default function Home() {
                 Explore focus areas
               </a>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="lg:col-span-6">
+          <Reveal className="lg:col-span-6">
             <div className="relative overflow-hidden rounded-[28px] bg-white p-3 ring-1 ring-zinc-900/10">
               <div className="relative overflow-hidden rounded-[22px] bg-white">
                 <picture>
@@ -141,15 +141,24 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
         </section>
 
         {/* About section removed as requested */}
 
-        <section id="focus" className="mt-14">
-          <h2 className="text-center font-(--font-serif) text-2xl tracking-tight text-zinc-900">
-            Focus Areas
-          </h2>
+        <section id="focus" className="mt-16">
+          <Reveal>
+            <p className="text-center text-xs font-semibold tracking-[0.22em] text-zinc-700/80">
+              WHAT WE DO
+            </p>
+            <h2 className="mt-2 text-center font-(--font-serif) text-4xl leading-tight tracking-[-0.01em] text-zinc-950 sm:text-5xl">
+              Focus Areas
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-7 text-zinc-800/90">
+              Making learning joyful, concept-strong, and confidence-building
+              through participation, exploration, and collaboration.
+            </p>
+          </Reveal>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {[
@@ -169,10 +178,7 @@ export default function Home() {
                 badge: "3",
               },
             ].map((c) => (
-              <div
-                key={c.title}
-                className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10"
-              >
+              <Reveal key={c.title} className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10">
                 <div className="flex items-center gap-3">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#E8E2C4] text-sm font-semibold text-zinc-800 ring-1 ring-zinc-900/10">
                     {c.badge}
@@ -182,20 +188,21 @@ export default function Home() {
                   </p>
                 </div>
                 <p className="mt-3 text-sm leading-7 text-zinc-700">{c.desc}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </section>
 
-        <section id="impact" className="mt-14">
+        <section id="impact" className="mt-16">
           <div className="grid gap-6 lg:grid-cols-12 lg:items-start">
-            <div className="lg:col-span-7">
-              <h2 className="font-(--font-serif) text-2xl tracking-tight text-zinc-900">
-                Our Commitment
-                <br />
-                to Their Future
+            <Reveal className="lg:col-span-7">
+              <p className="text-xs font-semibold tracking-[0.22em] text-zinc-700/80">
+                WHY IT MATTERS
+              </p>
+              <h2 className="mt-2 font-(--font-serif) text-4xl leading-tight tracking-[-0.01em] text-zinc-950 sm:text-5xl">
+                Our Commitment to Their Future
               </h2>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-700">
+              <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-800/90">
                 Thanks to your generous support, the camp has been successfully
                 conducted over the past two years. We look forward to your
                 continued encouragement in making this year’s camp impactful as
@@ -203,7 +210,7 @@ export default function Home() {
               </p>
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10">
+                <Reveal className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10">
                   <p className="text-xs font-semibold text-zinc-600">Budget</p>
                   <p className="mt-2 text-2xl font-semibold text-zinc-900">
                     ₹2,25,000
@@ -212,8 +219,8 @@ export default function Home() {
                     Inclusive of food, learning materials and resource person
                     fees
                   </p>
-                </div>
-                <div className="rounded-3xl bg-[#2F5D46] p-6 text-white shadow-sm ring-1 ring-black/10">
+                </Reveal>
+                <Reveal className="rounded-3xl bg-[#2F5D46] p-6 text-white shadow-sm ring-1 ring-black/10">
                   <p className="text-xs font-semibold text-white/80">
                     Support required
                   </p>
@@ -221,11 +228,11 @@ export default function Home() {
                   <p className="mt-1 text-xs font-semibold text-white/80">
                     per child
                   </p>
-                </div>
+                </Reveal>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="lg:col-span-5">
+            <Reveal className="lg:col-span-5">
               <div className="grid gap-4 sm:grid-cols-2">
                 {[
                   { k: "100%", v: "Funds directed to camp needs" },
@@ -233,29 +240,29 @@ export default function Home() {
                   { k: "10", v: "Camp days" },
                   { k: "2+", v: "Years successfully conducted" },
                 ].map((s) => (
-                  <div
-                    key={s.v}
-                    className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10"
-                  >
+                  <Reveal key={s.v} className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10">
                     <p className="text-2xl font-semibold text-zinc-900">{s.k}</p>
                     <p className="mt-2 text-xs font-semibold text-zinc-600">
                       {s.v}
                     </p>
-                  </div>
+                  </Reveal>
                 ))}
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
 
-        <section id="donate" className="mt-10">
-          <div className="rounded-3xl bg-[#F3EECF] p-6 ring-1 ring-zinc-900/10">
+        <section id="donate" className="mt-16">
+          <Reveal className="rounded-3xl bg-[#F3EECF] p-6 ring-1 ring-zinc-900/10">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <h2 className="text-center font-(--font-serif) text-2xl tracking-tight text-zinc-900 sm:text-left">
+                <p className="text-center text-xs font-semibold tracking-[0.22em] text-zinc-700/80 sm:text-left">
+                  DONATE
+                </p>
+                <h2 className="mt-2 text-center font-(--font-serif) text-4xl leading-tight tracking-[-0.01em] text-zinc-950 sm:text-left sm:text-5xl">
                   Make a Difference Today
                 </h2>
-                <p className="mt-1 text-sm text-zinc-700">
+                <p className="mt-4 text-base leading-7 text-zinc-800/90">
                   Budget: ₹2,25,000 (inclusive of food, learning materials and
                   resource person fees). Support required: ₹4,500 per child.
                 </p>
@@ -308,88 +315,69 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </section>
 
-        <section id="contact" className="mt-10">
-          <div className="rounded-3xl border border-zinc-900/10 bg-white p-6 shadow-sm">
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <h2 className="text-xl font-semibold tracking-tight text-zinc-900">
-                  Share your contribution details
-                </h2>
-                <p className="mt-1 text-sm text-zinc-700">
-                  Kindly share your contribution details with:
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              <a
-                href="tel:+919448283830"
-                className="group flex items-center justify-between gap-4 rounded-2xl bg-zinc-50 p-4 transition hover:bg-zinc-100"
-              >
-                <div className="min-w-0">
-                  <p className="truncate text-sm font-semibold text-zinc-900">
-                    Mahadev Kote
-                  </p>
-                  <p className="truncate text-sm text-zinc-700">
-                    +91 94482 83830
-                  </p>
-                </div>
-                <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-zinc-800 ring-1 ring-zinc-900/10 group-hover:bg-zinc-50">
-                  Tap to call
-                </span>
-              </a>
-
-              <a
-                href="tel:+919449874821"
-                className="group flex items-center justify-between gap-4 rounded-2xl bg-zinc-50 p-4 transition hover:bg-zinc-100"
-              >
-                <div className="min-w-0">
-                  <p className="truncate text-sm font-semibold text-zinc-900">
-                    Muralidhar K
-                  </p>
-                  <p className="truncate text-sm text-zinc-700">
-                    +91 94498 74821
-                  </p>
-                </div>
-                <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-zinc-800 ring-1 ring-zinc-900/10 group-hover:bg-zinc-50">
-                  Tap to call
-                </span>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section id="gallery" className="mt-10">
-          <h2 className="text-center font-(--font-serif) text-2xl tracking-tight text-zinc-900">
-            Camp moments
-          </h2>
-          <p className="mt-2 text-center text-sm text-zinc-700">
-            Glimpses from previous camps.
-          </p>
+        <section id="gallery" className="mt-16">
+          <Reveal>
+            <p className="text-center text-xs font-semibold tracking-[0.22em] text-zinc-700/80">
+              GALLERY
+            </p>
+            <h2 className="mt-2 text-center font-(--font-serif) text-4xl leading-tight tracking-[-0.01em] text-zinc-950 sm:text-5xl">
+              Camp moments
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-7 text-zinc-800/90">
+              Glimpses from previous camps.
+            </p>
+          </Reveal>
 
           <GalleryCarousel
             className="mt-5"
             items={[
-              { id: "4", label: "Learning through activities" },
-              { id: "1", label: "Morning circle" },
-              { id: "2", label: "Community & joy" },
-              { id: "5", label: "Hands-on sessions" },
-              { id: "6", label: "Outdoor learning" },
-              { id: "3", label: "Teamwork" },
+              { id: "4", label: "Camp moments" },
+              { id: "1", label: "Camp moments" },
+              { id: "2", label: "Camp moments" },
+              { id: "5", label: "Camp moments" },
+              { id: "6", label: "Camp moments" },
+              { id: "3", label: "Camp moments" },
+              { id: "7", label: "Camp moments" },
+              { id: "8", label: "Camp moments" },
+              { id: "9", label: "Camp moments" },
+              { id: "10", label: "Camp moments" },
+              { id: "11", label: "Camp moments" },
+              { id: "12", label: "Camp moments" },
+              { id: "13", label: "Camp moments" },
+              { id: "14", label: "Camp moments" },
+              { id: "15", label: "Camp moments" },
+              { id: "16", label: "Camp moments" },
+              { id: "17", label: "Camp moments" },
+              { id: "18", label: "Camp moments" },
+              { id: "19", label: "Camp moments" },
+              { id: "20", label: "Camp moments" },
+              { id: "21", label: "Camp moments" },
+              { id: "22", label: "Camp moments" },
+              { id: "23", label: "Camp moments" },
+              { id: "24", label: "Camp moments" },
+              { id: "25", label: "Camp moments" },
+              { id: "26", label: "Camp moments" },
+              { id: "27", label: "Camp moments" },
+              { id: "28", label: "Camp moments" },
+              { id: "29", label: "Camp moments" },
+              { id: "30", label: "Camp moments" },
             ]}
           />
         </section>
 
-        <section id="contact" className="mt-14">
-          <div className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10">
-            <h2 className="font-(--font-serif) text-2xl tracking-tight text-zinc-900">
+        <section id="contact" className="mt-16">
+          <Reveal className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10">
+            <p className="text-xs font-semibold tracking-[0.22em] text-zinc-700/80">
+              CONTACT
+            </p>
+            <h2 className="mt-2 font-(--font-serif) text-4xl leading-tight tracking-[-0.01em] text-zinc-950 sm:text-5xl">
               Get in Touch
             </h2>
-            <p className="mt-2 max-w-2xl text-sm leading-7 text-zinc-700">
-              Kindly share your contribution details with:
+            <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-800/90">
+              For any questions or follow-ups, please reach out:
             </p>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -412,7 +400,7 @@ export default function Home() {
                 <p className="mt-1 text-sm text-zinc-700">+91 94498 74821</p>
               </a>
             </div>
-          </div>
+          </Reveal>
         </section>
 
         <footer className="mt-10 rounded-3xl bg-[#12211B] p-8 text-sm text-zinc-200 ring-1 ring-black/10">
