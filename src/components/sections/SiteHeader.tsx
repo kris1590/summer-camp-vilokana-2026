@@ -32,14 +32,16 @@ export function SiteHeader({ links }: { links: NavLink[] }) {
   return (
     <header className="sticky top-0 z-30 border-b border-zinc-900/10 bg-[#F7F2D6]/80 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:px-6">
-        <a href="#hero" onClick={onAnchorClick} className="group min-w-0">
-          <p className="truncate text-sm font-semibold tracking-tight text-zinc-900">
-            Vilokana Foundation
-          </p>
-        </a>
+        <div className="flex flex-1 items-center gap-2">
+          <MobileNav links={links} />
+          <a href="#hero" onClick={onAnchorClick} className="group min-w-0">
+            <p className="truncate text-sm font-semibold tracking-tight text-zinc-900">
+              Vilokana Foundation
+            </p>
+          </a>
+        </div>
 
         <nav className="flex shrink-0 items-center gap-2">
-          <MobileNav links={links} />
           <a
             href="#focus"
             onClick={onAnchorClick}

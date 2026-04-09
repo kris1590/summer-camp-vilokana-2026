@@ -20,7 +20,7 @@ export function HeroSection() {
           Empower a <span className="italic text-[#2F5D46]">Rural</span> Child
         </h1>
 
-        <p className="mt-5 max-w-xl text-base leading-7 text-zinc-800/90 sm:text-[17px]">
+        <p className="mt-5 max-w-xl text-base leading-7 text-zinc-800/90 sm:text-[17px] text-justify">
           A 10-day residential camp for rural children from HD Kote taluk, Mysore
           district (20th April to 30th April 2026). Designed to provide
           meaningful learning experiences for 50 children from deserving
