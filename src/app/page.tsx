@@ -384,39 +384,52 @@ export default function Home() {
         </section>
 
         <section id="contact" className="mt-14">
-          <h2 className="font-(--font-serif) text-2xl tracking-tight text-zinc-900">
-            Get in Touch
-          </h2>
-          <p className="mt-2 max-w-2xl text-sm leading-7 text-zinc-700">
-            Kindly share your contribution details with:
-          </p>
+          <div className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10">
+            <h2 className="font-(--font-serif) text-2xl tracking-tight text-zinc-900">
+              Get in Touch
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm leading-7 text-zinc-700">
+              Kindly share your contribution details with:
+            </p>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <a
-              href="tel:+919448283830"
-              className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10 transition hover:bg-white"
-            >
-              <p className="text-sm font-semibold text-zinc-900">Mahadev Kote</p>
-              <p className="mt-1 text-sm text-zinc-700">+91 94482 83830</p>
-            </a>
-            <a
-              href="tel:+919449874821"
-              className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10 transition hover:bg-white"
-            >
-              <p className="text-sm font-semibold text-zinc-900">
-                Muralidhar K
-              </p>
-              <p className="mt-1 text-sm text-zinc-700">+91 94498 74821</p>
-            </a>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              <a
+                href="tel:+919448283830"
+                className="rounded-3xl bg-white p-6 ring-1 ring-zinc-900/10 transition hover:bg-zinc-50"
+              >
+                <p className="text-sm font-semibold text-zinc-900">
+                  Mahadev Kote
+                </p>
+                <p className="mt-1 text-sm text-zinc-700">+91 94482 83830</p>
+              </a>
+              <a
+                href="tel:+919449874821"
+                className="rounded-3xl bg-white p-6 ring-1 ring-zinc-900/10 transition hover:bg-zinc-50"
+              >
+                <p className="text-sm font-semibold text-zinc-900">
+                  Muralidhar K
+                </p>
+                <p className="mt-1 text-sm text-zinc-700">+91 94498 74821</p>
+              </a>
+            </div>
           </div>
         </section>
 
-        <footer className="mt-10 rounded-3xl bg-white/55 p-6 text-sm text-zinc-700 ring-1 ring-zinc-900/10">
-          <p className="max-w-3xl">
-            Your support can make a lasting difference in a child’s learning
-            journey.
-          </p>
-          <p className="mt-2 text-xs text-zinc-500">
+        <footer className="mt-10 rounded-3xl bg-[#12211B] p-8 text-sm text-zinc-200 ring-1 ring-black/10">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <p className="max-w-3xl text-sm leading-7 text-zinc-200">
+              Your support can make a lasting difference in a child’s learning
+              journey.
+            </p>
+            <a
+              href="#donate"
+              className="inline-flex items-center justify-center rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/15"
+            >
+              Donate
+            </a>
+          </div>
+          <div className="mt-6 h-px bg-white/10" />
+          <p className="mt-4 text-xs text-zinc-400">
             © {new Date().getFullYear()} Vilokana Foundation · Swaroopa Summer
             Camp
           </p>

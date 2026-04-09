@@ -47,8 +47,7 @@ export function MobileNav({ links }: { links: LinkItem[] }) {
           />
 
           <div className="absolute left-3 right-3 top-3 overflow-hidden rounded-3xl bg-[#F7F2D6] shadow-xl ring-1 ring-zinc-900/10">
-            <div className="flex items-center justify-between px-5 py-4">
-              <p className="text-sm font-semibold text-zinc-900">Menu</p>
+            <div className="flex items-center justify-end px-5 py-4">
               <button
                 type="button"
                 onClick={() => setOpen(false)}
