@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { FreeMode, Thumbs } from "swiper/modules";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FreeMode, Navigation, Pagination, Thumbs } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper/types";
 
 import "swiper/css";
 import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "swiper/css/thumbs";
 
 type GalleryItem = {
@@ -24,6 +27,8 @@ export function GalleryCarousel({
   const safeItems = useMemo(() => items.filter(Boolean), [items]);
   const len = safeItems.length;
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+  const prevRef = useRef<HTMLButtonElement | null>(null);
+  const nextRef = useRef<HTMLButtonElement | null>(null);
 
   const current = safeItems[0];
   if (len === 0 || !current) return null;
@@ -33,13 +38,43 @@ export function GalleryCarousel({
       <div className="relative overflow-hidden rounded-3xl border border-zinc-900/10 bg-white shadow-sm">
         <div className="pointer-events-none absolute inset-0 z-1 bg-linear-to-t from-black/45 via-black/0 to-black/0" />
 
+        <button
+          ref={prevRef}
+          type="button"
+          className="absolute left-3 top-1/2 z-2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-zinc-900 shadow-sm ring-1 ring-zinc-900/10 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#2F5D46]/25"
+          aria-label="Previous photo"
+        >
+          <FiChevronLeft aria-hidden className="text-xl" />
+        </button>
+        <button
+          ref={nextRef}
+          type="button"
+          className="absolute right-3 top-1/2 z-2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-zinc-900 shadow-sm ring-1 ring-zinc-900/10 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#2F5D46]/25"
+          aria-label="Next photo"
+        >
+          <FiChevronRight aria-hidden className="text-xl" />
+        </button>
+
         <Swiper
-          modules={[Thumbs]}
+          modules={[Navigation, Pagination, Thumbs]}
           className="overflow-visible!"
           slidesPerView={1}
+          loop
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          pagination={{ clickable: true }}
           thumbs={{
             swiper:
               thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+          }}
+          onBeforeInit={(swiper) => {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const nav = (swiper.params.navigation as any) ?? {};
+            nav.prevEl = prevRef.current;
+            nav.nextEl = nextRef.current;
+            swiper.params.navigation = nav;
           }}
         >
           {safeItems.map((item) => (
@@ -77,7 +112,6 @@ export function GalleryCarousel({
       <div className="mt-4">
         <div className="flex items-center justify-between gap-3">
           <p className="text-xs font-semibold text-zinc-600">More photos</p>
-          <p className="text-xs text-zinc-600">{len}</p>
         </div>
 
         <Swiper
@@ -85,6 +119,7 @@ export function GalleryCarousel({
           onSwiper={setThumbsSwiper}
           watchSlidesProgress
           freeMode
+          loop
           slidesPerView="auto"
           spaceBetween={12}
           className="mt-3"

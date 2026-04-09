@@ -41,7 +41,7 @@ export function MobileNav({ links }: { links: LinkItem[] }) {
         <span aria-hidden className="text-base leading-none">
           ☰
         </span>
-        <span className="leading-none">Menu</span>
+
       </button>
 
       {open ? (
