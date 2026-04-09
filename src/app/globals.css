@@ -9,6 +9,23 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes ctaPulse {
+  0%,
+  100% {
+    transform: translateZ(0) scale(1);
+    box-shadow: 0 10px 20px rgba(47, 93, 70, 0.18);
+  }
+  50% {
+    transform: translateZ(0) scale(1.03);
+    box-shadow: 0 16px 30px rgba(47, 93, 70, 0.32);
+  }
+}
+
+.cta-pulse {
+  animation: ctaPulse 1.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  will-change: transform, box-shadow;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -46,6 +63,10 @@ section[id] {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .cta-pulse {
+    animation: none;
   }
 
   .reveal {

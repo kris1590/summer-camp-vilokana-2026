@@ -10,9 +10,11 @@ export function HeroSection() {
       className="grid gap-10 lg:grid-cols-12 lg:items-center"
     >
       <Reveal className="lg:col-span-6">
-        <p className="inline-flex items-center rounded-full bg-white/60 px-3 py-1 text-xs font-semibold tracking-wide text-zinc-700 ring-1 ring-zinc-900/10">
-          Support Swaroopa Summer Camp (2026)
-        </p>
+        <div className="flex justify-center sm:block">
+          <p className="inline-flex items-center justify-center rounded-full bg-white/60 px-3 py-1 text-xs font-semibold tracking-wide text-zinc-700 ring-1 ring-zinc-900/10">
+            Support Swaroopa Summer Camp (2026)
+          </p>
+        </div>
 
         <h1 className="mt-5 font-(--font-serif) text-5xl leading-[0.92] tracking-[-0.02em] text-zinc-950 text-center sm:text-left   sm:text-7xl">
           Empower a <span className="italic text-[#2F5D46]">Rural</span> Child
