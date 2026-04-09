@@ -2,18 +2,12 @@ import { GalleryCarousel } from "@/components/GalleryCarousel";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-linear-to-b from-emerald-50 via-white to-white text-zinc-900">
-      <header className="sticky top-0 z-30 border-b border-zinc-900/10 bg-white/75 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+    <div className="min-h-screen bg-[#F7F2D6] text-zinc-900">
+      <header className="sticky top-0 z-30 border-b border-zinc-900/10 bg-[#F7F2D6]/80 backdrop-blur">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-3 px-4 py-4 sm:px-6">
           <a href="#" className="group min-w-0">
-            <p className="truncate text-xs font-semibold tracking-wide text-emerald-800">
+            <p className="truncate text-sm font-semibold tracking-tight text-zinc-900">
               Vilokana Foundation
-            </p>
-            <p className="truncate text-sm font-semibold tracking-tight text-zinc-900 group-hover:text-zinc-700">
-              Swaroopa Summer Camp (2026) · 20–30 April 2026
-            </p>
-            <p className="truncate text-xs text-zinc-600">
-              HD Kote taluk, Mysore district
             </p>
           </a>
 
@@ -23,12 +17,6 @@ export default function Home() {
               className="hidden rounded-full px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-900/5 sm:inline-flex"
             >
               Donate
-            </a>
-            <a
-              href="#about"
-              className="hidden rounded-full px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-900/5 sm:inline-flex"
-            >
-              About
             </a>
             <a
               href="#focus"
@@ -50,7 +38,7 @@ export default function Home() {
             </a>
             <a
               href="#donate"
-              className="inline-flex items-center justify-center rounded-full bg-emerald-700 px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-emerald-700/15 transition hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-700/25"
+              className="inline-flex items-center justify-center rounded-full bg-[#2F5D46] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#284D3B] focus:outline-none focus:ring-2 focus:ring-[#2F5D46]/25"
             >
               Donate now
             </a>
@@ -58,248 +46,188 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="mx-auto w-full max-w-6xl px-4 pb-14 pt-9 sm:px-6 sm:pt-12">
-        <section id="hero" className="grid items-start gap-8 lg:grid-cols-12">
-          <div className="lg:col-span-7">
-            <div className="inline-flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-900">
-                10-day residential camp
-              </span>
-              <span className="inline-flex items-center rounded-full border border-zinc-900/10 bg-white px-3 py-1 text-xs font-semibold text-zinc-800">
-                50 rural children
-              </span>
-              <span className="inline-flex items-center rounded-full border border-zinc-900/10 bg-white px-3 py-1 text-xs font-semibold text-zinc-800">
-                Activity-based learning
-              </span>
-            </div>
+      <main className="mx-auto w-full max-w-6xl px-4 pb-16 pt-10 sm:px-6 sm:pt-14">
+        <section id="hero" className="grid gap-10 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-6">
+            <p className="inline-flex items-center rounded-full bg-white/60 px-3 py-1 text-xs font-semibold tracking-wide text-zinc-700 ring-1 ring-zinc-900/10">
+              Support Swaroopa Summer Camp (2026)
+            </p>
 
-            <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl">
-              Swaroopa Summer Camp (2026)
+            <h1 className="mt-5 font-(--font-serif) text-5xl leading-[0.95] tracking-tight text-zinc-900 sm:text-6xl">
+              Empower a{" "}
+              <span className="italic text-[#2F5D46]">Rural</span>
+              <br />
+              Child
             </h1>
-            <p className="mt-2 text-pretty text-base font-semibold text-emerald-800 sm:text-lg">
-              20th April to 30th April 2026 · HD Kote taluk, Mysore district
+
+            <p className="mt-4 max-w-xl text-sm leading-7 text-zinc-700">
+              A 10-day residential camp for rural children from HD Kote taluk,
+              Mysore district (20th April to 30th April 2026). Designed to
+              provide meaningful learning experiences for 50 children from
+              deserving backgrounds studying in government and rural private
+              schools.
             </p>
 
-            <p className="mt-4 max-w-2xl text-pretty text-lg leading-8 text-zinc-700">
-              We seek your support for the Swaroopa Summer Camp (2026), a 10-day
-              residential camp for rural children from HD Kote taluk, Mysore
-              district. The camp brings meaningful learning experiences to 50
-              children from deserving backgrounds studying in government and
-              rural private schools.
-            </p>
-
-            <div className="mt-7 grid gap-3 sm:grid-cols-3">
-              <div className="rounded-2xl border border-zinc-900/10 bg-white p-4 shadow-sm">
-                <p className="text-xs font-semibold text-zinc-600">Dates</p>
-                <p className="mt-1 text-sm font-semibold text-zinc-900">
-                  20–30 April 2026
-                </p>
-              </div>
-              <div className="rounded-2xl border border-zinc-900/10 bg-white p-4 shadow-sm">
-                <p className="text-xs font-semibold text-zinc-600">Location</p>
-                <p className="mt-1 text-sm font-semibold text-zinc-900">
-                  HD Kote, Mysore
-                </p>
-              </div>
-              <div className="rounded-2xl border border-zinc-900/10 bg-white p-4 shadow-sm">
-                <p className="text-xs font-semibold text-zinc-600">
-                  Support needed
-                </p>
-                <p className="mt-1 text-sm font-semibold text-zinc-900">
-                  ₹4,500 per child
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href="#donate"
-                className="inline-flex items-center justify-center rounded-2xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-900/25"
+                className="inline-flex items-center justify-center rounded-full bg-[#2F5D46] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#284D3B] focus:outline-none focus:ring-2 focus:ring-[#2F5D46]/25"
               >
-                Contribute now
+                Support the camp
               </a>
               <a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-2xl border border-zinc-900/15 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm transition hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-900/15"
+                href="#focus"
+                className="inline-flex items-center justify-center rounded-full bg-white/70 px-5 py-3 text-sm font-semibold text-zinc-900 ring-1 ring-zinc-900/10 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-zinc-900/10"
               >
-                Share contribution details
+                Explore focus areas
               </a>
             </div>
           </div>
 
-          <aside className="lg:col-span-5">
-            <div className="relative overflow-hidden rounded-3xl border border-zinc-900/10 bg-white shadow-sm">
-              <div className="absolute inset-0 bg-radial from-emerald-200/40 via-transparent to-transparent" />
-              <div className="relative p-5 sm:p-6">
-                <p className="text-sm font-semibold text-zinc-900">
-                  Contribution snapshot
-                </p>
-                <p className="mt-2 text-sm leading-6 text-zinc-700">
-                  Budget ₹2,25,000 · Support required ₹4,500 per child.
-                </p>
-                <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-2xl bg-zinc-50 p-4">
-                    <p className="text-xs font-semibold text-zinc-600">
-                      Children supported
-                    </p>
-                    <p className="mt-1 text-2xl font-semibold tracking-tight text-zinc-900">
-                      50
-                    </p>
-                    <p className="mt-1 text-xs leading-5 text-zinc-600">
-                      Government & rural private schools
-                    </p>
-                  </div>
-                  <div className="rounded-2xl bg-zinc-50 p-4">
-                    <p className="text-xs font-semibold text-zinc-600">Duration</p>
-                    <p className="mt-1 text-2xl font-semibold tracking-tight text-zinc-900">
-                      10 days
-                    </p>
-                    <p className="mt-1 text-xs leading-5 text-zinc-600">
-                      Residential learning camp
-                    </p>
-                  </div>
-                </div>
-                <a
-                  href="#donate"
-                  className="mt-5 inline-flex w-full items-center justify-center rounded-2xl bg-emerald-700 px-5 py-3 text-sm font-semibold text-white shadow-sm shadow-emerald-700/15 transition hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-700/25"
+          <div className="lg:col-span-6">
+            <div className="relative overflow-hidden rounded-[28px] bg-[#D6E6D7] p-3 ring-1 ring-zinc-900/10">
+              <div className="absolute inset-0 bg-radial from-white/60 via-transparent to-transparent" />
+              <div className="relative overflow-hidden rounded-[22px] bg-[#CFE1D0]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/assets/gallery-clean/4.lg.jpg"
+                  alt="Swaroopa Summer Camp"
+                  className="h-[260px] w-full object-cover opacity-70 sm:h-[340px]"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-[#2F5D46]/40 via-transparent to-transparent" />
+              </div>
+            </div>
+
+            <div className="mt-5 grid grid-cols-3 gap-3">
+              {[
+                { k: "20–30 Apr", v: "Dates" },
+                { k: "HD Kote", v: "Location" },
+                { k: "₹4,500", v: "Per child" },
+              ].map((s) => (
+                <div
+                  key={s.v}
+                  className="rounded-2xl bg-white/65 p-4 ring-1 ring-zinc-900/10"
                 >
-                  Donate now
-                </a>
-              </div>
+                  <p className="text-sm font-semibold text-zinc-900">{s.k}</p>
+                  <p className="mt-1 text-xs font-semibold text-zinc-600">
+                    {s.v}
+                  </p>
+                </div>
+              ))}
             </div>
-          </aside>
-        </section>
-
-        <section id="about" className="mt-10">
-          <div className="rounded-3xl border border-zinc-900/10 bg-white p-6 shadow-sm">
-            <h2 className="text-xl font-semibold tracking-tight text-zinc-900">
-              About the camp
-            </h2>
-            <p className="mt-2 text-sm leading-7 text-zinc-700">
-              The camp offers a safe residential environment with food and
-              accommodation, while emphasising learning through participation,
-              exploration, and collaboration.
-            </p>
-            <p className="mt-3 text-sm leading-7 text-zinc-700">
-              Designed for 50 children from deserving backgrounds studying in
-              government and rural private schools.
-            </p>
           </div>
         </section>
 
-        <section id="focus" className="mt-10 grid gap-4 lg:grid-cols-12">
-          <div className="lg:col-span-7">
-            <div className="rounded-3xl border border-zinc-900/10 bg-white p-6 shadow-sm">
-              <h2 className="text-xl font-semibold tracking-tight text-zinc-900">
-                Focus areas
-              </h2>
+        {/* About section removed as requested */}
 
-              <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                {[
-                  {
-                    title: "Maths + Science",
-                    desc: "Make maths and science more interesting through activity based learning.",
-                  },
-                  {
-                    title: "Concept strength",
-                    desc: "Facilitate the understanding of essential concepts that strengthen high school learning.",
-                  },
-                  {
-                    title: "Life skills",
-                    desc: "Develop life skills through theatre and group activities.",
-                  },
-                ].map((c) => (
-                  <div
-                    key={c.title}
-                    className="rounded-2xl bg-zinc-50 p-4"
-                  >
-                    <p className="text-sm font-semibold text-zinc-900">
-                      {c.title}
-                    </p>
-                    <p className="mt-1 text-sm leading-6 text-zinc-700">
-                      {c.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
+        <section id="focus" className="mt-14">
+          <h2 className="text-center font-(--font-serif) text-2xl tracking-tight text-zinc-900">
+            Focus Areas
+          </h2>
 
-              <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
-                <p className="text-sm font-semibold text-emerald-900">
-                  Warm greetings.
-                </p>
-                <p className="mt-1 text-sm leading-6 text-emerald-900/90">
-                  Thanks to generous support, the camp has been successfully
-                  conducted over the past two years. We look forward to your
-                  continued encouragement in making this year’s camp impactful
-                  as well.
-                </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                title: "Maths & Science",
+                desc: "Make maths and science more interesting for children through activity based learning.",
+                badge: "1",
+              },
+              {
+                title: "Academic Foundation",
+                desc: "Facilitate the understanding of certain essential concepts that will strengthen high school academic learning.",
+                badge: "2",
+              },
+              {
+                title: "Theatre & Life Skills",
+                desc: "Develop life skills through theatre and group activities.",
+                badge: "3",
+              },
+            ].map((c) => (
+              <div
+                key={c.title}
+                className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#E8E2C4] text-sm font-semibold text-zinc-800 ring-1 ring-zinc-900/10">
+                    {c.badge}
+                  </span>
+                  <p className="text-sm font-semibold text-zinc-900">
+                    {c.title}
+                  </p>
+                </div>
+                <p className="mt-3 text-sm leading-7 text-zinc-700">{c.desc}</p>
               </div>
-            </div>
+            ))}
           </div>
+        </section>
 
-          <div className="lg:col-span-5">
-            <div
-              id="impact"
-              className="rounded-3xl border border-zinc-900/10 bg-white p-6 shadow-sm"
-            >
-              <h2 className="text-xl font-semibold tracking-tight text-zinc-900">
-                Your impact
+        <section id="impact" className="mt-14">
+          <div className="grid gap-6 lg:grid-cols-12 lg:items-start">
+            <div className="lg:col-span-7">
+              <h2 className="font-(--font-serif) text-2xl tracking-tight text-zinc-900">
+                Our Commitment
+                <br />
+                to Their Future
               </h2>
-              <p className="mt-2 text-sm leading-7 text-zinc-700">
-                Every contribution directly supports food, stay, learning
-                materials, and resource persons.
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-zinc-700">
+                Thanks to your generous support, the camp has been successfully
+                conducted over the past two years. We look forward to your
+                continued encouragement in making this year’s camp impactful as
+                well.
               </p>
 
-              <div className="mt-5 grid gap-3">
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10">
+                  <p className="text-xs font-semibold text-zinc-600">Budget</p>
+                  <p className="mt-2 text-2xl font-semibold text-zinc-900">
+                    ₹2,25,000
+                  </p>
+                  <p className="mt-2 text-xs leading-6 text-zinc-600">
+                    Inclusive of food, learning materials and resource person
+                    fees
+                  </p>
+                </div>
+                <div className="rounded-3xl bg-[#2F5D46] p-6 text-white shadow-sm ring-1 ring-black/10">
+                  <p className="text-xs font-semibold text-white/80">
+                    Support required
+                  </p>
+                  <p className="mt-2 text-2xl font-semibold">₹4,500</p>
+                  <p className="mt-1 text-xs font-semibold text-white/80">
+                    per child
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="grid gap-4 sm:grid-cols-2">
                 {[
-                  {
-                    k: "₹4,500",
-                    v: "helps sponsor one child",
-                  },
-                  {
-                    k: "10 days",
-                    v: "of structured learning + life skills",
-                  },
-                  {
-                    k: "50 children",
-                    v: "from deserving rural backgrounds",
-                  },
+                  { k: "100%", v: "Funds directed to camp needs" },
+                  { k: "50", v: "Children supported" },
+                  { k: "10", v: "Camp days" },
+                  { k: "2+", v: "Years successfully conducted" },
                 ].map((s) => (
                   <div
-                    key={s.k}
-                    className="flex items-start justify-between gap-4 rounded-2xl bg-zinc-50 p-4"
+                    key={s.v}
+                    className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10"
                   >
-                    <p className="text-lg font-semibold text-zinc-900">{s.k}</p>
-                    <p className="text-sm leading-6 text-zinc-700">{s.v}</p>
+                    <p className="text-2xl font-semibold text-zinc-900">{s.k}</p>
+                    <p className="mt-2 text-xs font-semibold text-zinc-600">
+                      {s.v}
+                    </p>
                   </div>
                 ))}
-              </div>
-
-              <div className="mt-6 rounded-2xl border border-zinc-900/10 bg-white p-4">
-                <p className="text-sm font-semibold text-zinc-900">
-                  A simple request
-                </p>
-                <p className="mt-1 text-sm leading-6 text-zinc-700">
-                  Request you to also forward this message to like minded
-                  people.
-                </p>
-                <a
-                  href="#donate"
-                  className="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-emerald-700 px-5 py-3 text-sm font-semibold text-white shadow-sm shadow-emerald-700/15 transition hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-700/25"
-                >
-                  Donate now
-                </a>
               </div>
             </div>
           </div>
         </section>
 
         <section id="donate" className="mt-10">
-          <div className="rounded-3xl border border-zinc-900/10 bg-white p-6 shadow-sm">
+          <div className="rounded-3xl bg-[#F3EECF] p-6 ring-1 ring-zinc-900/10">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <h2 className="text-xl font-semibold tracking-tight text-zinc-900">
-                  Donate
+                <h2 className="text-center font-(--font-serif) text-2xl tracking-tight text-zinc-900 sm:text-left">
+                  Make a Difference Today
                 </h2>
                 <p className="mt-1 text-sm text-zinc-700">
                   Budget: ₹2,25,000 (inclusive of food, learning materials and
@@ -308,71 +236,49 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-5 grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
-              <div className="rounded-2xl border border-zinc-900/10 bg-zinc-50 p-4">
-                <p className="text-sm font-semibold text-zinc-900">
-                  Bank transfer details
-                </p>
-                <dl className="mt-3 grid gap-3 text-sm">
-                  <div className="rounded-xl bg-white p-3 ring-1 ring-zinc-900/10">
-                    <dt className="text-xs font-semibold text-zinc-600">
-                      Account name
-                    </dt>
-                    <dd className="mt-1 font-semibold text-zinc-900">
+            <div className="mt-6 grid gap-6 lg:grid-cols-12 lg:items-start">
+              <div className="lg:col-span-7">
+                <p className="text-sm font-semibold text-zinc-900">Bank Details</p>
+                <div className="mt-3 grid gap-2 text-sm text-zinc-700">
+                  <p>
+                    <span className="font-semibold text-zinc-900">
                       Vilokana Foundation
-                    </dd>
-                  </div>
-                  <div className="rounded-xl bg-white p-3 ring-1 ring-zinc-900/10">
-                    <dt className="text-xs font-semibold text-zinc-600">
-                      A/C No.
-                    </dt>
-                    <dd className="mt-1 break-all font-semibold text-zinc-900">
-                      110173165126
-                    </dd>
-                  </div>
-                  <div className="rounded-xl bg-white p-3 ring-1 ring-zinc-900/10">
-                    <dt className="text-xs font-semibold text-zinc-600">
-                      Bank
-                    </dt>
-                    <dd className="mt-1 font-semibold text-zinc-900">
-                      Canara Bank, Kuvempunagar Branch, Mysore
-                    </dd>
-                  </div>
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    <div className="rounded-xl bg-white p-3 ring-1 ring-zinc-900/10">
-                      <dt className="text-xs font-semibold text-zinc-600">
-                        IFSC
-                      </dt>
-                      <dd className="mt-1 font-semibold text-zinc-900">
-                        CNRB0011717
-                      </dd>
-                    </div>
-                    <div className="rounded-xl bg-white p-3 ring-1 ring-zinc-900/10">
-                      <dt className="text-xs font-semibold text-zinc-600">
-                        UPI ID
-                      </dt>
-                      <dd className="mt-1 break-all font-semibold text-zinc-900">
-                        324235855165126@cnrb
-                      </dd>
-                    </div>
-                  </div>
-                </dl>
+                    </span>
+                  </p>
+                  <p>
+                    A/C No: <span className="font-semibold">110173165126</span>
+                  </p>
+                  <p>
+                    Canara Bank, Kuvempunagar Branch, Mysore
+                  </p>
+                  <p>
+                    IFSC: <span className="font-semibold">CNRB0011717</span>
+                  </p>
+                  <p>
+                    UPI ID:{" "}
+                    <span className="font-semibold break-all">
+                      324235855165126@cnrb
+                    </span>
+                  </p>
+                </div>
               </div>
 
-              <div className="rounded-3xl border border-zinc-900/10 bg-white p-4 shadow-sm">
-                <p className="text-sm font-semibold text-zinc-900">
-                  UPI scanner
-                </p>
-                <p className="mt-1 text-xs text-zinc-600">
-                  Scan this QR to pay.
-                </p>
-                <div className="mt-3 rounded-2xl bg-zinc-50 p-3">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/assets/qr.png"
-                    alt="UPI QR code to donate"
-                    className="mx-auto h-auto w-full max-w-[320px] rounded-xl bg-white p-2 shadow-sm ring-1 ring-zinc-900/10"
-                  />
+              <div className="lg:col-span-5">
+                <div className="rounded-3xl bg-white p-5 ring-1 ring-zinc-900/10">
+                  <p className="text-xs font-semibold tracking-wide text-zinc-600">
+                    Scan & Pay
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-zinc-900">
+                    UPI scanner
+                  </p>
+                  <div className="mt-4 rounded-2xl bg-[#F7F2D6] p-4 ring-1 ring-zinc-900/10">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/assets/qr.png"
+                      alt="UPI QR code to donate"
+                      className="mx-auto h-auto w-full max-w-[360px] rounded-2xl bg-white p-3 shadow-sm"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -431,16 +337,12 @@ export default function Home() {
         </section>
 
         <section id="gallery" className="mt-10">
-          <div className="flex items-end justify-between gap-4">
-            <div>
-              <h2 className="text-xl font-semibold tracking-tight text-zinc-900">
-                Camp moments
-              </h2>
-              <p className="mt-1 text-sm text-zinc-600">
-                Glimpses from previous camps.
-              </p>
-            </div>
-          </div>
+          <h2 className="text-center font-(--font-serif) text-2xl tracking-tight text-zinc-900">
+            Camp moments
+          </h2>
+          <p className="mt-2 text-center text-sm text-zinc-700">
+            Glimpses from previous camps.
+          </p>
 
           <GalleryCarousel
             className="mt-5"
@@ -455,7 +357,33 @@ export default function Home() {
           />
         </section>
 
-        <footer className="mt-12 border-t border-zinc-900/10 pt-8 text-sm text-zinc-600">
+        <footer id="contact" className="mt-14 border-t border-zinc-900/10 pt-10 text-sm text-zinc-700">
+          <h2 className="font-(--font-serif) text-2xl tracking-tight text-zinc-900">
+            Get in Touch
+          </h2>
+          <p className="mt-2 max-w-2xl text-sm leading-7 text-zinc-700">
+            Kindly share your contribution details with:
+          </p>
+
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <a
+              href="tel:+919448283830"
+              className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10 transition hover:bg-white"
+            >
+              <p className="text-sm font-semibold text-zinc-900">Mahadev Kote</p>
+              <p className="mt-1 text-sm text-zinc-700">+91 94482 83830</p>
+            </a>
+            <a
+              href="tel:+919449874821"
+              className="rounded-3xl bg-white/65 p-6 ring-1 ring-zinc-900/10 transition hover:bg-white"
+            >
+              <p className="text-sm font-semibold text-zinc-900">
+                Muralidhar K
+              </p>
+              <p className="mt-1 text-sm text-zinc-700">+91 94498 74821</p>
+            </a>
+          </div>
+
           <p className="max-w-3xl">
             Your support can make a lasting difference in a child’s learning
             journey.
