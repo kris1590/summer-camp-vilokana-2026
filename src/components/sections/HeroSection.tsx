@@ -1,6 +1,9 @@
 import { Reveal } from "@/components/Reveal";
 
 export function HeroSection() {
+  const locationMapUrl =
+    "https://www.google.com/maps/place/ANVAYA+PUBLIC+HIGH+SCHOOL,+KOHALA+VILLAGE,+MYSORE/@12.1339428,76.4906198,17z/data=!3m1!4b1!4m6!3m5!1s0x3baf610a60d100cb:0x12c19df52e39e5a2!8m2!3d12.1339428!4d76.4931947!16s%2Fg%2F11vdzv8g_9?entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D";
+
   return (
     <section
       id="hero"
@@ -68,19 +71,33 @@ export function HeroSection() {
         </div>
 
         <div className="mt-5 grid grid-cols-3 gap-3">
-          {[
-            { k: "20–30 Apr", v: "Dates" },
-            { k: "HD Kote", v: "Location" },
-            { k: "₹4,500", v: "Per child" },
-          ].map((s) => (
-            <div
-              key={s.v}
-              className="rounded-2xl bg-white/65 p-4 ring-1 ring-zinc-900/10"
-            >
-              <p className="text-sm font-semibold text-zinc-900">{s.k}</p>
-              <p className="mt-1 text-xs font-semibold text-zinc-600">{s.v}</p>
-            </div>
-          ))}
+          <div className="rounded-2xl bg-white/65 p-4 ring-1 ring-zinc-900/10">
+            <p className="text-sm font-semibold text-zinc-900">20–30 Apr</p>
+            <p className="mt-1 text-xs font-semibold text-zinc-600">Dates</p>
+          </div>
+
+          <a
+            href={locationMapUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="group rounded-2xl bg-white/65 p-4 ring-1 ring-zinc-900/10 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#2F5D46]/25"
+            aria-label="Open location in Google Maps"
+          >
+            <p className="text-sm font-semibold text-zinc-900">
+              HD Kote{" "}
+              <span className="align-middle text-xs font-semibold text-zinc-600 group-hover:text-zinc-900">
+                ↗
+              </span>
+            </p>
+            <p className="mt-1 text-xs font-semibold text-zinc-600">Location</p>
+          </a>
+
+          <div className="rounded-2xl bg-white/65 p-4 ring-1 ring-zinc-900/10">
+            <p className="text-sm font-semibold text-zinc-900">₹4,500</p>
+            <p className="mt-1 text-xs font-semibold text-zinc-600">
+              Per child
+            </p>
+          </div>
         </div>
       </Reveal>
     </section>
