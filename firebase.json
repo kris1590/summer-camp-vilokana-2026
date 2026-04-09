@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "site": "summercamp-4404d",
+      "public": "out",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "cleanUrls": true,
+      "trailingSlash": false
+    },
+    {
+      "site": "vilokana-summer-camp-2026",
+      "public": "out",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "cleanUrls": true,
+      "trailingSlash": false
+    }
+  ]
+}
+

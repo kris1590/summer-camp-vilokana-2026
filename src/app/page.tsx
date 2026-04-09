@@ -85,16 +85,31 @@ export default function Home() {
           </div>
 
           <div className="lg:col-span-6">
-            <div className="relative overflow-hidden rounded-[28px] bg-[#D6E6D7] p-3 ring-1 ring-zinc-900/10">
-              <div className="absolute inset-0 bg-radial from-white/60 via-transparent to-transparent" />
-              <div className="relative overflow-hidden rounded-[22px] bg-[#CFE1D0]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/assets/gallery-clean/4.lg.jpg"
-                  alt="Swaroopa Summer Camp"
-                  className="h-[260px] w-full object-cover opacity-70 sm:h-[340px]"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-[#2F5D46]/40 via-transparent to-transparent" />
+            <div className="relative overflow-hidden rounded-[28px] bg-white p-3 ring-1 ring-zinc-900/10">
+              <div className="relative overflow-hidden rounded-[22px] bg-white">
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet={[
+                      "/assets/gallery-clean/4.sm.webp 720w",
+                      "/assets/gallery-clean/4.md.webp 1200w",
+                      "/assets/gallery-clean/4.lg.webp 1800w",
+                    ].join(", ")}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                  />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/assets/gallery-clean/4.lg.jpg"
+                    srcSet={[
+                      "/assets/gallery-clean/4.sm.jpg 720w",
+                      "/assets/gallery-clean/4.md.jpg 1200w",
+                      "/assets/gallery-clean/4.lg.jpg 1800w",
+                    ].join(", ")}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    alt="Swaroopa Summer Camp"
+                    className="h-[260px] w-full object-cover sm:h-[340px]"
+                  />
+                </picture>
               </div>
             </div>
 
