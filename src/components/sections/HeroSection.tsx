@@ -13,7 +13,7 @@ export function HeroSection() {
         <div className="flex justify-center sm:block">
           <p className="inline-flex items-center gap-2 rounded-full bg-white/60 px-3 py-1 text-xs font-semibold tracking-wide text-zinc-700 ring-1 ring-zinc-900/10">
             <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-            Camp In Progress · Apr 20–30, 2026
+            Camp In Progress · Apr 23 – May 03, 2026
           </p>
         </div>
 
