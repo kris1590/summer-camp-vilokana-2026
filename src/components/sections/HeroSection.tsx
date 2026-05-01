@@ -11,8 +11,9 @@ export function HeroSection() {
     >
       <Reveal className="lg:col-span-6">
         <div className="flex justify-center sm:block">
-          <p className="inline-flex items-center justify-center rounded-full bg-white/60 px-3 py-1 text-xs font-semibold tracking-wide text-zinc-700 ring-1 ring-zinc-900/10">
-            Support Swaroopa Summer Camp (2026)
+          <p className="inline-flex items-center gap-2 rounded-full bg-white/60 px-3 py-1 text-xs font-semibold tracking-wide text-zinc-700 ring-1 ring-zinc-900/10">
+            <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+            Camp In Progress · Apr 20–30, 2026
           </p>
         </div>
 
@@ -21,18 +22,18 @@ export function HeroSection() {
         </h1>
 
         <p className="mt-5 max-w-xl text-base leading-7 text-zinc-800/90 sm:text-[17px] text-justify">
-          A 10-day residential camp for rural children from HD Kote taluk, Mysore
-          district (20th April to 30th April 2026). Designed to provide
-          meaningful learning experiences for 50 children from deserving
-          backgrounds studying in government and rural private schools.
+          Swaroopa Summer Camp 2026 is currently underway; a 10-day residential
+          experience for ~40 rural children from HD Kote taluk, Mysore district.
+          Follow the journey as it unfolds through nature walks, science
+          experiments, theatre, and more.
         </p>
 
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
           <a
-            href="#donate"
+            href="#gallery"
             className="inline-flex items-center justify-center rounded-full bg-[#2F5D46] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#284D3B] focus:outline-none focus:ring-2 focus:ring-[#2F5D46]/25"
           >
-            Support the camp
+            See camp progress
           </a>
           <a
             href="#focus"
@@ -74,7 +75,7 @@ export function HeroSection() {
 
         <div className="mt-5 grid grid-cols-3 gap-3">
           <div className="rounded-2xl bg-white/65 p-4 ring-1 ring-zinc-900/10">
-            <p className="text-sm font-semibold text-zinc-900">20–30 Apr</p>
+            <p className="text-sm font-semibold text-zinc-900">23 Apr – 3 May</p>
             <p className="mt-1 text-xs font-semibold text-zinc-600">Dates</p>
           </div>
 

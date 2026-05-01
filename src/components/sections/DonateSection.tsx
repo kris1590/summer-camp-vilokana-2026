@@ -7,14 +7,14 @@ export function DonateSection() {
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-center text-xs font-semibold tracking-[0.22em] text-zinc-700/80 sm:text-left">
-              DONATE
+              SUPPORT US
             </p>
             <h2 className="mt-2 text-center font-(--font-serif) text-4xl leading-tight tracking-[-0.01em] text-zinc-950 sm:text-left sm:text-5xl">
-              Make a Difference Today
+              Support Swaroopa Camp
             </h2>
             <p className="mt-4 text-base leading-7 text-zinc-800/90">
-              Budget: ₹2,25,000 (inclusive of food, learning materials and
-              resource person fees). Support required: ₹4,500 per child.
+              Total camp budget: ₹2,25,000 (food, learning materials, and
+              resource person fees). Contribution: ₹4,500 per child.
             </p>
           </div>
         </div>

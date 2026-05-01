@@ -9,12 +9,14 @@ export function ImpactSection() {
             WHY IT MATTERS
           </p>
           <h2 className="mt-2 font-(--font-serif) text-4xl leading-tight tracking-[-0.01em] text-zinc-950 sm:text-5xl">
-            Our Commitment to Their Future
+            Your Support at Work
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-800/90">
-            Thanks to your generous support, the camp has been successfully
-            conducted over the past two years. We look forward to your continued
-            encouragement in making this year’s camp impactful as well.
+            Thanks to your generous contributions, the funds raised have been
+            fully received and directed towards the camp — covering food,
+            learning materials, and the experiences that are shaping these
+            children&rsquo;s learning right now. Every rupee is going exactly
+            where it was meant to.
           </p>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -42,10 +44,10 @@ export function ImpactSection() {
         <Reveal className="lg:col-span-5">
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              { k: "100%", v: "Funds directed to camp needs" },
-              { k: "50", v: "Children supported" },
+              { k: "100%", v: "Funds received & directed to camp" },
+              { k: "37", v: "Children in camp (20 boys, 17 girls)" },
               { k: "10", v: "Camp days" },
-              { k: "2+", v: "Years successfully conducted" },
+              { k: "3rd", v: "Consecutive year of the camp" },
             ].map((s) => (
               <Reveal
                 key={s.v}

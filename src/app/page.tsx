@@ -1,3 +1,5 @@
+import { CampUpdateCard } from "@/components/sections/CampUpdateCard";
+import { CampStoryCard } from "@/components/sections/CampStoryCard";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { DonateSection } from "@/components/sections/DonateSection";
 import { FocusSection } from "@/components/sections/FocusSection";
@@ -24,6 +26,8 @@ export default function Home() {
 
       <main className="mx-auto w-full max-w-6xl px-4 pb-16 pt-10 sm:px-6 sm:pt-14">
         <HeroSection />
+        <CampUpdateCard />
+        <CampStoryCard />
 
         {/* About section removed as requested */}
         <FocusSection />

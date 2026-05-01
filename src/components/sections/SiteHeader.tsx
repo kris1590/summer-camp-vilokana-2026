@@ -73,9 +73,9 @@ export function SiteHeader({ links }: { links: NavLink[] }) {
           <a
             href="#donate"
             onClick={onAnchorClick}
-            className="cta-pulse inline-flex items-center justify-center rounded-full bg-[#2F5D46] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#284D3B] focus:outline-none focus:ring-2 focus:ring-[#2F5D46]/25"
+            className="inline-flex items-center justify-center rounded-full bg-[#2F5D46] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-[#284D3B] focus:outline-none focus:ring-2 focus:ring-[#2F5D46]/25"
           >
-            Donate now
+            Donate
           </a>
         </nav>
       </div>
